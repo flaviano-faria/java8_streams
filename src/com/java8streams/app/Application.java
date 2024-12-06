@@ -1,7 +1,9 @@
 package com.java8streams.app;
 
 import com.java8streas.service.DistinctService;
+import com.java8streas.service.FilterLimitService;
 import com.java8streas.service.FilterService;
+import com.java8streas.service.FindFirstService;
 
 public class Application {
 	
@@ -13,6 +15,11 @@ public class Application {
 		FilterService service = new FilterService();
 		System.out.println(service.filterNumbers());
 		
+		FindFirstService findFirstService = new FindFirstService();
+		System.out.println(findFirstService.findFirstOcurrency());
+		
+		FilterLimitService limitService = new FilterLimitService();
+		limitService.filterElementsByLimit(3);
 	}
 
 }
