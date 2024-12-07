@@ -24,6 +24,8 @@ public class Application {
 		
 		MinMaxService minMaxService = new MinMaxService();
 		minMaxService.getMinFromList();
+		
+		minMaxService.getMaxFromList();
 	}
 
 }
