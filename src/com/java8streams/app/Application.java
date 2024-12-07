@@ -4,6 +4,7 @@ import com.java8streas.service.DistinctService;
 import com.java8streas.service.FilterLimitService;
 import com.java8streas.service.FilterService;
 import com.java8streas.service.FindFirstService;
+import com.java8streas.service.MinMaxService;
 
 public class Application {
 	
@@ -20,6 +21,9 @@ public class Application {
 		
 		FilterLimitService limitService = new FilterLimitService();
 		limitService.filterElementsByLimit(3);
+		
+		MinMaxService minMaxService = new MinMaxService();
+		minMaxService.getMinFromList();
 	}
 
 }
