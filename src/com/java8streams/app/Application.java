@@ -4,6 +4,7 @@ import com.java8streas.service.DistinctService;
 import com.java8streas.service.FilterLimitService;
 import com.java8streas.service.FilterService;
 import com.java8streas.service.FindFirstService;
+import com.java8streas.service.JoinStreamService;
 import com.java8streas.service.MinMaxService;
 
 public class Application {
@@ -26,6 +27,9 @@ public class Application {
 		minMaxService.getMinFromList();
 		
 		minMaxService.getMaxFromList();
+		
+		JoinStreamService joinService = new JoinStreamService();
+		joinService.joinString();
 	}
 
 }
