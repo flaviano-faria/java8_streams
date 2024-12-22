@@ -4,15 +4,35 @@
   <artifactId>java8_streams</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>src/main/java</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <release>22</release>
+          <release>21</release>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M6</version>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>5.6.2</version>
+            </dependency>
+        </dependencies>
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+	<dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter</artifactId>
+	    <version>5.11.4</version>
+	    <scope>test</scope>
+	</dependency>
+  </dependencies>
 </project>
