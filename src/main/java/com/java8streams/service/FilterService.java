@@ -1,4 +1,4 @@
-package com.java8streas.service;
+package com.java8streams.service;
 
 import java.util.ArrayList;
 import java.util.List;

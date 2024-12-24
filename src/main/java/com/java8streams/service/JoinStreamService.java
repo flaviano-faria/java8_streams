@@ -1,4 +1,4 @@
-package com.java8streas.service;
+package com.java8streams.service;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,11 +1,13 @@
 package com.java8streams.app;
 
-import com.java8streas.service.DistinctService;
-import com.java8streas.service.FilterLimitService;
-import com.java8streas.service.FilterService;
-import com.java8streas.service.FindFirstService;
-import com.java8streas.service.JoinStreamService;
-import com.java8streas.service.MinMaxService;
+import java.util.List;
+
+import com.java8streams.service.DistinctService;
+import com.java8streams.service.FilterLimitService;
+import com.java8streams.service.FilterService;
+import com.java8streams.service.FindFirstService;
+import com.java8streams.service.JoinStreamService;
+import com.java8streams.service.MinMaxService;
 
 public class Application {
 	
@@ -21,7 +23,8 @@ public class Application {
 		System.out.println(findFirstService.findFirstOcurrency());
 		
 		FilterLimitService limitService = new FilterLimitService();
-		limitService.filterElementsByLimit(3);
+		List<Integer> filteredList = limitService.filterElementsByLimit(3);
+		filteredList.stream().forEach(n -> System.out.println(n));
 		
 		MinMaxService minMaxService = new MinMaxService();
 		minMaxService.getMinFromList();
