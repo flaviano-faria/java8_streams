@@ -2,6 +2,7 @@ package com.java8streams.app;
 
 import java.util.List;
 
+import com.java8.functionalinterface.service.IntFunctionService;
 import com.java8.functionalinterface.service.IntToStringService;
 import com.java8streams.service.DistinctService;
 import com.java8streams.service.FilterLimitService;
@@ -38,6 +39,8 @@ public class Application {
 		IntToStringService intToStringService = new IntToStringService();
 		System.out.println(intToStringService.intToString(5));
 		
+		IntFunctionService intFunctionService = new IntFunctionService();
+		System.out.println(intFunctionService.calculateDisount(100));
 	}
 
 }
