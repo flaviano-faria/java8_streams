@@ -2,6 +2,7 @@ package com.java8streams.app;
 
 import java.util.List;
 
+import com.java8.functionalinterface.service.ConsumerService;
 import com.java8.functionalinterface.service.IntFunctionService;
 import com.java8.functionalinterface.service.IntToStringService;
 import com.java8streams.service.DistinctService;
@@ -41,6 +42,9 @@ public class Application {
 		
 		IntFunctionService intFunctionService = new IntFunctionService();
 		System.out.println(intFunctionService.calculateDisount(100));
+		
+		ConsumerService consumerService = new ConsumerService();
+		consumerService.applyConsumerPercent(100);
 	}
 
 }
