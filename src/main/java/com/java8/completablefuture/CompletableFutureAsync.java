@@ -8,14 +8,14 @@ public class CompletableFutureAsync {
 		
 		CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 			try {
-                Thread.sleep(2000);
+                Thread.sleep(5000);
                 System.out.println("Task completed!");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 		});
 		
-		// Waiting for the task to complete
+		
         try {
             future.get();
         } catch (Exception e) {
