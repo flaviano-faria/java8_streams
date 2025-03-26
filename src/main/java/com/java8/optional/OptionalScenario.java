@@ -19,10 +19,22 @@ public class OptionalScenario {
 		System.out.println(nameString);
 		
 		List<Optional<String>> listString = new ArrayList<Optional<String>>();
-
+		
 		
 		boolean result = listString.stream().anyMatch(Optional::isPresent);
 		System.out.println(result);
+		
+		
+		//Given: optional is not empty
+		Optional<String> optString = Optional.of("3");
+		
+		//When add optional in list
+		List<Optional<String>> optList = new ArrayList<Optional<String>>();
+		optList.add(optString);
+		
+		//Then resultOptList is true
+		boolean resultOptList = optList.stream().anyMatch(Optional::isPresent);
+		System.out.println(resultOptList);
 	}
 
 }
